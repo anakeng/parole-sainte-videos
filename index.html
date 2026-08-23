@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parole Sainte — Mes vidéos</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0f1115; color: #e8eaed;
+  }
+  h1 { font-size: 22px; margin: 8px 0 4px; }
+  .sous-titre { color: #9aa0a6; font-size: 14px; margin-bottom: 20px; }
+  .carte {
+    background: #1a1d23; border-radius: 14px;
+    padding: 16px; margin-bottom: 16px;
+    border: 1px solid #2a2f38;
+  }
+  .meta { display: flex; gap: 10px; align-items: center; margin-bottom: 8px; }
+  .creneau {
+    background: #2d6cdf; color: white; font-size: 12px;
+    padding: 3px 10px; border-radius: 20px; font-weight: 600;
+  }
+  .date { color: #9aa0a6; font-size: 12px; }
+  h2 { font-size: 18px; margin: 6px 0; }
+  .hook { color: #c4c9d0; font-size: 14px; line-height: 1.5; margin: 8px 0; }
+  .hashtags {
+    background: #22262e; padding: 10px; border-radius: 8px;
+    font-size: 13px; color: #8ab4f8; cursor: pointer; margin: 12px 0;
+  }
+  .hashtags small { color: #6b7280; font-size: 11px; }
+  .btn {
+    display: block; text-align: center; background: #2d6cdf; color: white;
+    padding: 14px; border-radius: 10px; text-decoration: none;
+    font-weight: 600; font-size: 16px; margin-top: 12px;
+  }
+  .yt {
+    display: block; text-align: center; color: #9aa0a6;
+    padding: 10px; text-decoration: none; font-size: 14px; margin-top: 6px;
+  }
+  .vide { text-align: center; color: #9aa0a6; padding: 40px 20px; }
+</style>
+</head>
+<body>
+  <h1>🙏 Parole Sainte</h1>
+  <p class="sous-titre">Mes vidéos prêtes à publier — 1 disponible(s)</p>
+  
+        <div class="carte">
+          <div class="meta">
+            <span class="creneau">6h</span>
+            <span class="date">23/08/2026 à 15:57</span>
+          </div>
+          <h2>Jonas</h2>
+          <p class="hook">Imagine être enfermé dans l'obscurité la plus totale pendant 72 heures, sans savoir si tu reverras la lumière.</p>
+          <p class="hashtags" onclick="copier(this)">#bible #foi #spiritualité #Jonas<br><small>(toucher pour copier)</small></p>
+          <a class="btn" href="videos/20260823_155711_6h_Jonas.mp4" download>⬇️ Télécharger la vidéo</a>
+          <a class="yt" href="https://youtube.com/shorts/0CXzzRjY_Kw" target="_blank">Voir sur YouTube</a>
+        </div>
+        
+
+<script>
+function copier(el) {
+  const texte = el.childNodes[0].textContent.trim();
+  navigator.clipboard.writeText(texte).then(() => {
+    const original = el.style.background;
+    el.style.background = '#1e7e34';
+    setTimeout(() => el.style.background = original, 600);
+  });
+}
+</script>
+</body>
+</html>
